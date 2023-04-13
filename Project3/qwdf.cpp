@@ -10,9 +10,9 @@ int main() {
 	vector <int> y(n);
 	vector <int> r(n);
 	vector <int> a(n);
-	x = { 3,9,9,3,13 };
-	y = { 0,0,9,0,13 };
-	r = { 3,2,8,2,4 };
+	x = { 142,12,12,10,4 };
+	y = { 0,  12,3, 10,0 };
+	r = { 123,4, 12,5, 12 };
 	k = 0;
 	for (int i = 0; i < n; i++) {
 		k = 0;
@@ -27,14 +27,12 @@ int main() {
 	for (int i = 0; i < n; i++)
 		if (k < a[i])
 			k = a[i];
-		
-	cout << "Max num of intersections: " << k << " in a circle number ";
+	cout << "Max num of intersections: " << k-1 << " in a circle number ";
 	for (int i = 0; i < n; i++) {
 		if (k == a[i]) {
-			cout << i << ", which area = " << (r[i] * r[i]) * 3.141592653589793238 << endl;
+			cout << i+1 << ", which area = " << (r[i] * r[i]) * 3.141592653589793238 << endl;
 		}
 	}
-	
 	return 0;
 }
 
